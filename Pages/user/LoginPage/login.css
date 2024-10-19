@@ -1,0 +1,60 @@
+:root {
+  --main-font: sans-serif;
+  --main-background-color: #2a2a2a;
+  --primary-font-color: #fec901;
+  --second-font-color: #1e231d;
+  --second-background-color: #d8deda;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+body {
+  background-color: var(--main-background-color);
+  color: var(--primary-font-color);
+}
+
+.logo {
+  width: 240px;
+  display: block;
+  margin: auto;
+  padding: 80px 0px 0px 0px;
+}
+
+h2 {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  font-size: 30px;
+  margin: 20px 0px 20px 0px;
+}
+
+.container {
+  align-self: center;
+  margin: auto;
+  width: 35%;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: var(--second-background-color);
+  color: var(--second-font-color);
+}
+
+form{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+form>label, input{
+    width: 100%;
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+
+}
+input{
+    color: var(--second-font-color);
+    border-color: transparent;
+    border-bottom: var(--second-font-color) solid thin;
+}
