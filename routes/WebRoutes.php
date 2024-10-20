@@ -2,27 +2,23 @@
 
 namespace Routes;
 
+use App\Controllers\ProductController;
 use Lib\Routes;
+use App\Controllers\UserController;
 
 Routes::get('/', function(){
-    return "esta es la pagina de home";
+    include "../public/views/Home/HomeView.php";
 });
 
-Routes::get('/register', function(){
-    return "esta es la pagina de registro de un usuario nuevo";
-});
+Routes::get('/profile', [UserController::class, 'index']);
 
-Routes::get('/login', function(){
-    return "Pagina iniciar session";
-});
+Routes::get('/register', [UserController::class, 'index']);
 
-Routes::get('/products', function(){
-    return "Pagina productos";
-});
+Routes::get('/login', [UserController::class, 'index']);
 
-Routes::get('/orders', function(){
-    return "Pagina ordenes";
-});
+Routes::get('/products', [ProductController::class, 'index']);
+
+Routes::get('/orders', []);
 
 Routes::get('/orders/:slug', function($slug){
     return "El curso es: $slug";
