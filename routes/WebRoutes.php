@@ -5,27 +5,27 @@ namespace Routes;
 use Lib\Routes;
 
 Routes::get('/', function(){
-    return "esta es la pagina de home";
+    include __DIR__ . '/../public/views/home.php';
 });
 
 Routes::get('/register', function(){
-    return "esta es la pagina de registro de un usuario nuevo";
+    include __DIR__ . '/../public/views/Register/register.php';
 });
 
 Routes::get('/login', function(){
-    return "Pagina iniciar session";
+    include __DIR__ . '/../public/views/Login/login.php';
 });
 
 Routes::get('/products', function(){
-    return "Pagina productos";
+    include __DIR__ . '/../public/views/Products/products.php';
 });
 
 Routes::get('/orders', function(){
-    return "Pagina ordenes";
+    include __DIR__ . '/../public/views/Orders/orders.php';
 });
 
 Routes::get('/orders/:slug', function($slug){
-    return "El curso es: $slug";
+    echo "La orden es: $slug";
 });
 
 Routes::dispatch();
