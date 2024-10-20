@@ -32,8 +32,6 @@
 
 <?php
 session_start();
-
-//Como el tema de sesiónes todavía no va redirigirá automáticamente a la pagina de login.php
 header("Location: Pages/user/loginPage/login.php");
 exit;
 // // Verificar si la sesión está activa

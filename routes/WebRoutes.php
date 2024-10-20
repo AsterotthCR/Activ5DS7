@@ -5,14 +5,11 @@ namespace Routes;
 use Lib\Routes;
 
 Routes::get('/', function(){
-    return ;
+    return "esta es la pagina de home";
 });
 
 Routes::get('/register', function(){
-    return [
-        'title' => 'home',
-        'content' => 'hola mundo desde array'
-    ];
+    return "esta es la pagina de registro de un usuario nuevo";
 });
 
 Routes::get('/login', function(){
