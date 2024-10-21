@@ -18,6 +18,7 @@ Routes::post('/profile/:id/edit', [UserController::class, 'updateProfile']);
 Routes::get('/register', [UserController::class, 'register']);
 Routes::post('/register', [UserController::class, 'newUser']);
 Routes::get('/login', [UserController::class, 'login']);
+Routes::post('/login', [UserController::class, 'loginAction']);
 
 //Products Routes
 

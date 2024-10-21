@@ -26,7 +26,7 @@
     <h2>Hola Bienvenido a nuestra web</h2>
   </div>
   <div class="container">
-    <form>
+    <form action="/login" method="post">
       <label for="username">Username <i class="fa-solid fa-user"></i></label>
       <input
         type="text"
@@ -45,7 +45,7 @@
         placeholder="password..."
         required />
 
-      <input type="submit" value="Iniciar sesión" class="submit" />
+        <button type="submit">Iniciar Session</button>
     </form>
     <p class="mes">¿No tienes un usuario? Regístrate YA!</p>
     <button class="toRegister"><a href="/register">Registrar un nuevo usuario</a></button>
