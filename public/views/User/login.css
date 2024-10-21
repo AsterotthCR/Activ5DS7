@@ -1,10 +1,11 @@
 :root {
   --main-font: sans-serif;
-  --main-background-color: #2a2a2a;
-  --primary-font-color: #fec901;
-  --second-font-color: #1e231d;
+  --main-background-color: #121212;
+  --primary-font-color: #ffd731;
+  --second-font-color: #121212;
   --second-background-color: #d8deda;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +35,9 @@ h2 {
 
 .container {
   align-self: center;
-  margin: auto;
+  margin: 20px 0px 20px 0px;
+  margin-right: auto;
+  margin-left: auto;
   width: 35%;
   padding: 30px;
   border-radius: 5px;
@@ -42,19 +45,60 @@ h2 {
   color: var(--second-font-color);
 }
 
-form{
-    display: flex;
-    flex-flow: column wrap;
+form {
+  display: flex;
+  flex-flow: column wrap;
 }
 
-form>label, input{
-    width: 100%;
-    margin: auto;
-    padding: 10px 0px 10px 0px;
+form>label,
+input {
+  width: 100%;
+  margin: auto;
+  padding: 10px 0px 10px 0px;
 
 }
-input{
-    color: var(--second-font-color);
-    border-color: transparent;
-    border-bottom: var(--second-font-color) solid thin;
+
+input {
+  color: var(--second-font-color);
+  border-color: transparent;
+  border-bottom: var(--second-font-color) solid thin;
+}
+
+.mes{
+  display: flex;
+  flex-flow: row wrap;
+  align-self: center;
+  padding: 10px;
+}
+
+.toRegister{
+  display: flex;
+  flex-flow: row wrap;
+  align-self: center;
+  margin: auto;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: var(--main-background-color) solid thin;
+  border-top: var(--main-background-color) solid thin;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.5s ease;
+}
+
+.toRegister:hover{
+  transition: 0.5s;
+  background-color: var(--main-background-color);
+  border-radius: 5px;
+  border-color: var(--primary-font-color) solid thin;
+  padding: 5px;
+  color: #fff;
+}
+
+a{
+  text-decoration: none;
+  color: var(--second-font-color);
+}
+
+.toRegister>a:hover{
+  color: #fff;
 }
