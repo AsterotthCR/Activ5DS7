@@ -56,24 +56,19 @@ class UserController extends Controller{
         
         $user = new User();
         $data = $_POST;
-    
-        // Verificar si el formulario fue enviado correctamente
+
         if (isset($data['username']) && isset($data['password'])) {
             $username = $data['username'];
             $password = $data['password'];
     
-            // Lógica para verificar las credenciales
             $authenticatedUser = $user->authenticate($username, $password);
 
             if ($authenticatedUser != null) {
-                // Iniciar sesión y redirigir al área protegida
                 return $this->redirect("/profile/{$authenticatedUser['codUser']}");
             } else {
-                // Si la autenticación falla, mostrar mensaje de error
                 return $this->redirect("/login");
             }
         } else {
-            // Si los campos de usuario y contraseña no están presentes
             return $this->redirect("/login");
         }
     }

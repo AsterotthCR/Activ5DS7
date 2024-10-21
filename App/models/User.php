@@ -121,15 +121,10 @@ class User extends Model {
     }
 
     public function authenticate($username, $password) {
-        // Preparar la consulta para evitar inyecciones SQL
-        $sql = ("SELECT * FROM users WHERE user = ?");
-    
-        // Obtener los resultados
-        $user = $this->query($sql,[$username])->first();
+        $sql = ("SELECT * FROM users WHERE user = ? && password = ?");
+        $user = $this->query($sql,[$username,$password])->first();
 
-        // Verificar si el usuario existe y si la contraseña es correcta
-        if (password_verify($password,$user['password'])) {
-            // Si la autenticación es correcta, devolver el objeto User o los datos del usuario
+        if ($user) {
             return ($user);
         }
         return null;
