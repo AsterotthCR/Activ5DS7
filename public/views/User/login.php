@@ -48,7 +48,7 @@
       <input type="submit" value="Iniciar sesión" class="submit" />
     </form>
     <p class="mes">¿No tienes un usuario? Regístrate YA!</p>
-    <button class="toRegister"><a href="views/User/register.php">Registrar un nuevo usuario</a></button>
+    <button class="toRegister"><a href="/register">Registrar un nuevo usuario</a></button>
   </div>
 </body>
 

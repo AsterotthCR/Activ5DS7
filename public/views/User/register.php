@@ -25,31 +25,25 @@
         <h2>Registrar un nuevo usuario!</h2>
     </div>
     <div class="container">
-        <form>
-            <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" placeholder="Escribe tu nombre de pila">
+        <form action="/register" method="post">
 
-            <label for="lastname">Apellido</label>
-            <input type="text" name="lastname" id="lastname" placeholder="Escrib tu apellido">
-            <label for="username">Username <i class="fa-solid fa-user"></i></label>
-            <input
-                type="text"
-                name="username"
-                id="username"
-                placeholder="Danos un nombre de usuario"
-                required />
-
-            <label for="password">password
-                <i class="fa-solid fa-key"></i>
-            </label>
-            <input
-                type="password"
-                name="password"
-                id="password"
-                placeholder="Escribe tu contraseña (una facil no estaría mal :) )"
-                required />
-
-            <input type="submit" value="Iniciar sesión" class="submit" />
+            <div>
+                <label for="username">Username <i class="fa-solid fa-user"></i></label>
+                <input type="text" name="username" id="username"  placeholder="Danos un nombre de usuario" required />
+            </div>
+            <div>
+                <label for="password">password <i class="fa-solid fa-key"></i></label>
+                <input type="password" name="password" id="password" placeholder="Escribe tu contraseña (una facil no estaría mal :) )" required />
+            </div>
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name" placeholder="Escribe tu nombre de pila">
+            </div>
+            <div>
+                <label for="lastname">Apellido</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Escrib tu apellido">
+            </div>
+            <button type="submit">Registarse</button>
         </form>
         <p class="mes">Espera... ¿Ya estabas registrado?</p>
         <button class="toLogin"><a href="/login">Inicia sesión con tu usuario</a></button>

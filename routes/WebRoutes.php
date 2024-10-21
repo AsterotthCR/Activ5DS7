@@ -12,11 +12,12 @@ Routes::get('/', function(){
 
 
 // Users Routes
-Routes::get('/profile', [UserController::class, 'index']);
+Routes::get('/profile/:id', [UserController::class, 'profile']);
 
-Routes::get('/register', [UserController::class, 'index']);
+Routes::get('/register', [UserController::class, 'register']);
+Routes::post('/register', [UserController::class, 'newUser']);
 
-Routes::get('/login', [UserController::class, 'index']);
+Routes::get('/login', [UserController::class, 'login']);
 
 //Products Routes
 

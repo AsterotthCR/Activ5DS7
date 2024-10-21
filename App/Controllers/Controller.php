@@ -22,4 +22,8 @@ class Controller{
         }
     }
 
+    public function redirect($route){
+        header("Location: {$route}");
+    }
+
 }
