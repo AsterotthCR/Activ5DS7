@@ -1,0 +1,52 @@
+:root {
+    --main-font: sans-serif;
+    --main-background-color: #2a2a2a;
+    --primary-font-color: #fec901;
+    --second-font-color: #1e231d;
+    --second-background-color: #d8deda;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+  }
+  
+  body {
+    background-color: var(--main-background-color);
+    color: var(--primary-font-color);
+  }
+  
+  header {
+    display: flex;
+    background-color: var(--second-background-color);
+    color: var(--second-font-color);
+    justify-content: space-between;
+  }
+  
+  .logo{
+      width: 150px;
+      align-self: flex-start;
+      margin: 10px;
+  }
+  
+  .cabecera-menu{
+      display: flex;
+      flex-flow: row wrap;
+      align-content: center;
+  }
+  
+  navbar>a{
+      margin: 0px 30px 0px 0px;
+      text-decoration: none;
+      transition: 0.6s ease;
+      color: var(--second-font-color);
+  }
+  navbar>a:hover{
+      transition: 0.5s;
+      background-color: var(--main-background-color);
+      border-radius: 5px;
+      border-color: var(--primary-font-color) solid thin;
+      padding: 5px;
+      color: #fff;
+  }
