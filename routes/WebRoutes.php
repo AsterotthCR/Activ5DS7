@@ -13,10 +13,10 @@ Routes::get('/', function(){
 
 // Users Routes
 Routes::get('/profile/:id', [UserController::class, 'profile']);
-
+Routes::get('/profile/:id/edit', [UserController::class, 'editProfile']);
+Routes::post('/profile/:id/edit', [UserController::class, 'updateProfile']);
 Routes::get('/register', [UserController::class, 'register']);
 Routes::post('/register', [UserController::class, 'newUser']);
-
 Routes::get('/login', [UserController::class, 'login']);
 
 //Products Routes

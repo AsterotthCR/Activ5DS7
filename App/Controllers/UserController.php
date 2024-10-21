@@ -33,4 +33,22 @@ class UserController extends Controller{
         return $this->redirect('/login');
     }
 
+    public function editProfile($id){
+        $user = new User();
+
+        $loggedUser = $user->getById($id);
+        
+        return $this->view('user.editprofile',compact('loggedUser')); 
+    }
+
+    public function updateProfile($id) {
+        $user = new User();
+
+        $data = $_POST;
+
+        $user->update($id, $data);
+
+        return $this->redirect("/profile/{$id}");
+    }
+
 }

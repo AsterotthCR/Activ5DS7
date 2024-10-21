@@ -9,5 +9,7 @@
     <h1>esto es el perfil del usuario</h1>
     <p>Nombre: <?= $loggedUser['name'] ?></p>
     <p>Apellido: <?= $loggedUser['lastname'] ?></p>
+
+    <a href="/profile/<?= $loggedUser['codUser']?>/edit"><button>Editar perfil</button></a>
 </body>
 </html>
