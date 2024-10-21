@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class Office {
     private $officeCode;
     private $city;

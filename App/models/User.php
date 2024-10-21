@@ -1,11 +1,18 @@
 <?php
 
-class User {
-    private $codUser;
-    private $username;
-    private $password;
-    private $name;
-    private $lastname;
+namespace App\Models;
+
+
+class User extends Model {
+    protected $codUser;
+    protected $username;
+    protected $password;
+    protected $name;
+    protected $lastname;
+
+
+    protected $columID = 'codUser';
+    protected $table = 'users';
 
     // Constructor con todos los argumentos
     public function __construct($codUser = null, $username = null, $password = null, $name = null, $lastname = null) {
@@ -35,6 +42,10 @@ class User {
 
     public function getLastname() {
         return $this->lastname;
+    }
+
+    public function getColumID() {
+        return $this->columID;
     }
 
     // Setters
@@ -108,5 +119,7 @@ class User {
             }
         };
     }
+
+    
 }
 

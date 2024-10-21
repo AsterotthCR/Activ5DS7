@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Models;
+
 class Payment {
     private $customerNumber;
     private $checkNumber;
