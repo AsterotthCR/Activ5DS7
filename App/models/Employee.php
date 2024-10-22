@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Employee {
+class Employee extends Model{
     private $employeeNumber;
     private $lastName;
     private $firstName;
@@ -11,6 +11,8 @@ class Employee {
     private $officeCode;
     private $reportsTo;
     private $jobTitle;
+
+    protected $table = "employees";
 
     // Constructor con todos los argumentos
     public function __construct($employeeNumber = null, $lastName = null, $firstName = null, $extension = null, $email = null,

@@ -1,9 +1,15 @@
 <?php
 
 namespace App\Controllers;
- 
-class OrderController{
+
+use App\Models\Order;
+
+class OrderController extends Controller{
     public function index(){
-        return "Esto es la pagina de ordenes";
+        $order = new Order();        
+        
+        $allorders = $order->getAll();
+        
+        return $allorders;
     }
 }

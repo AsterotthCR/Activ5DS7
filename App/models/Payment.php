@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
-class Payment {
+class Payment extends Model {
     private $customerNumber;
     private $checkNumber;
     private $paymentDate;
     private $amount;
+
+    protected $table = "payments";
 
     // Constructor con todos los argumentos
     public function __construct($customerNumber = null, $checkNumber = null, $paymentDate = null, $amount = null) {

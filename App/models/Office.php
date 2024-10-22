@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Office {
+class Office extends Model{
     private $officeCode;
     private $city;
     private $phone;
@@ -12,6 +12,8 @@ class Office {
     private $country;
     private $postalCode;
     private $territory;
+
+    protected $table = "offices";
 
     // Constructor con todos los argumentos
     public function __construct($officeCode = null, $city = null, $phone = null, $addressLine1 = null, $addressLine2 = null,

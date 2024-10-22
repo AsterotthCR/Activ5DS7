@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Product {
+class Product extends Model{
     private $productCode;
     private $productName;
     private $productLine;
@@ -12,6 +12,8 @@ class Product {
     private $quantityInStock;
     private $buyPrice;
     private $msrp;
+
+    protected $table = "products";
 
     // Constructor con todos los argumentos
     public function __construct($productCode = null, $productName = null, $productLine = null, $productScale = null,

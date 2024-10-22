@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
-class ProductLine {
+class ProductLine extends Model {
     private $productLine;
     private $textDescription;
     private $htmlDescription;
     private $image;
+
+    protected $table = "productlines";
 
     // Constructor con todos los argumentos
     public function __construct($productLine = null, $textDescription = null, $htmlDescription = null, $image = null) {

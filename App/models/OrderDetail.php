@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
-class OrderDetail {
+class OrderDetail  extends Model{
     private $orderNumber;
     private $productCode;
     private $quantityOrdered;
     private $priceEach;
     private $orderLineNumber;
+
+    protected $table = "orderdetails";
 
     // Constructor con todos los argumentos
     public function __construct($orderNumber = null, $productCode = null, $quantityOrdered = null, $priceEach = null, $orderLineNumber = null) {

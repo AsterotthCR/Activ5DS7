@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Order {
+class Order extends Model{
     private $orderNumber;
     private $orderDate;
     private $requiredDate;
@@ -10,6 +10,8 @@ class Order {
     private $status;
     private $comments;
     private $customerNumber;
+
+    protected $table = "orders";
 
     // Constructor con todos los argumentos
     public function __construct($orderNumber = null, $orderDate = null, $requiredDate = null, $shippedDate = null,

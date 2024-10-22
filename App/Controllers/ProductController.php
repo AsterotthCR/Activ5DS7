@@ -2,8 +2,14 @@
 
 namespace App\Controllers;
 
+use App\Models\Product;
+
 class ProductController{
     public function index(){
-        return "Esto es la pagina de productos";
+        $product = new Product();        
+        
+        $allproducts = $product->getAll();
+        
+        return $allproducts;
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class Customer {
+class Customer extends Model{
     private $customerNumber;
     private $customerName;
     private $contactLastName;
@@ -16,6 +16,8 @@ class Customer {
     private $country;
     private $salesRepEmployeeNumber;
     private $creditLimit;
+
+    protected $table = 'customers';
 
     // Constructor con todos los argumentos
     public function __construct($customerNumber = null, $customerName = null, $contactLastName = null, $contactFirstName = null, $phone = null,
