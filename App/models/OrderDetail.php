@@ -108,4 +108,17 @@ class OrderDetail  extends Model{
             }
         };
     }
+
+    public function grupByProduct(){
+        
+        $sql = "SELECT productCode, 
+        SUM(quantityOrdered) AS total_quantity_ordered, 
+        SUM(priceEach * quantityOrdered) AS total_sales, 
+        COUNT(orderLineNumber) AS total_orders 
+        FROM orderdetails 
+        GROUP BY productCode;";
+
+        return $this->query($sql,[])->get();
+
+    }
 }
