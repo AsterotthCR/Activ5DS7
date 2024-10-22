@@ -13,7 +13,7 @@
         rel="shortcut icon"
         href="./icons8-zorro-48.png"
         type="image/x-icon" />
-    <link rel="stylesheet" href="/views/User/register.css">
+    <link rel="stylesheet" href="assets/css/Users/register.css">
     <script
         src="https://kit.fontawesome.com/ee26d7fa70.js"
         crossorigin="anonymous"></script>
@@ -28,8 +28,8 @@
         <form action="/register" method="post">
 
             <div>
-                <label for="username">Username <i class="fa-solid fa-user"></i></label>
-                <input type="text" name="username" id="username"  placeholder="Danos un nombre de usuario" required />
+                <label for="user">Username <i class="fa-solid fa-user"></i></label>
+                <input type="text" name="user" id="user"  placeholder="Danos un nombre de usuario" required />
             </div>
             <div>
                 <label for="password">password <i class="fa-solid fa-key"></i></label>
@@ -41,7 +41,7 @@
             </div>
             <div>
                 <label for="lastname">Apellido</label>
-                <input type="text" name="lastname" id="lastname" placeholder="Escrib tu apellido">
+                <input type="text" name="lastname" id="lastname" placeholder="Escribe tu apellido">
             </div>
             <button type="submit">Registarse</button>
         </form>

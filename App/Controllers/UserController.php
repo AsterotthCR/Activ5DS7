@@ -53,24 +53,42 @@ class UserController extends Controller{
     }
 
     public function loginAction() {
-        
-        $user = new User();
-        $data = $_POST;
+    $user = new User();
+    $data = $_POST;
 
-        if (isset($data['username']) && isset($data['password'])) {
-            $username = $data['username'];
-            $password = $data['password'];
-    
-            $authenticatedUser = $user->authenticate($username, $password);
+    if (isset($data['user']) && isset($data['password'])) {
+        $username = $data['user'];
+        $password = $data['password'];
 
-            if ($authenticatedUser != null) {
-                return $this->redirect("/profile/{$authenticatedUser['codUser']}");
-            } else {
-                return $this->redirect("/login");
-            }
+        // Autenticar al usuario
+        $authenticatedUser = $user->authenticate($username, $password);
+
+        if ($authenticatedUser != null) {
+            // Iniciar sesión
+            session_start();
+            $_SESSION['user_id'] = $authenticatedUser['codUser'];
+            $_SESSION['name'] = $authenticatedUser['name'];
+            $_SESSION['lastname'] = $authenticatedUser['lastname'];
+            $_SESSION['username'] = $authenticatedUser['user'];
+
+            // Redirigir a la página de inicio
+            return $this->redirect("/");
         } else {
+            // Si falló el login, establecer una variable en la sesión para mostrar el modal de error
+            session_start();
+            $_SESSION['login_error'] = true;
             return $this->redirect("/login");
         }
+    } else {
+        return $this->redirect("/login");
+    }
+}
+
+
+    public function logout() {
+        session_start();
+        session_destroy();
+        return $this->redirect("/login");
     }
 
 }
