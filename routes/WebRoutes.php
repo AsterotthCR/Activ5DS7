@@ -26,6 +26,7 @@ Routes::get('/register', [UserController::class, 'register']);
 Routes::post('/register', [UserController::class, 'newUser']);
 Routes::get('/login', [UserController::class, 'login']);
 Routes::post('/login', [UserController::class, 'loginAction']);
+Routes::get('/logout', [UserController::class, 'logout']);
 
 //Office Routes
 Routes::get('/office',[OfficeController::class, 'index']);
