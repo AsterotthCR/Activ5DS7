@@ -248,4 +248,24 @@ class Customer extends Model{
             }
         };
     }
+
+    public function topFiveClients(){
+        $sql = "SELECT c.customerNumber, c.customerName, COUNT(p.customerNumber) AS total_orders 
+        FROM customers c JOIN payments p ON c.customerNumber = p.customerNumber 
+        GROUP BY c.customerNumber, c.customerName ORDER BY total_orders DESC LIMIT 5;";
+        
+        $topFive = $this->query($sql,[])->get();
+
+        return $topFive;
+    }
+
+    public function noobFiveClients(){
+        $sql = "SELECT c.customerNumber, c.customerName, COUNT(p.customerNumber) AS total_orders 
+        FROM customers c JOIN payments p ON c.customerNumber = p.customerNumber 
+        GROUP BY c.customerNumber, c.customerName ORDER BY total_orders ASC LIMIT 5;";
+        
+        $topFive = $this->query($sql,[])->get();
+
+        return $topFive;
+    }
 }

@@ -12,4 +12,14 @@ class ProductController{
         
         return $allproducts;
     }
+
+    public function findByLine($line){
+
+        $product = new Product();        
+        
+        $allproducts = $product->getWhere("productLine",$line);
+        
+        return $allproducts;
+        
+    }
 }

@@ -13,4 +13,20 @@ class CustomerController extends Controller{
         
         return $allcustomerss;
     }
+
+    public function findTopFive(){
+        $customers = new Customer();        
+        
+        $allcustomerss = $customers->topFiveClients();
+        
+        return $allcustomerss;
+    }
+
+    public function findNoobFive(){
+        $customers = new Customer();        
+        
+        $allcustomerss = $customers->noobFiveClients();
+        
+        return $allcustomerss;
+    }
 }
