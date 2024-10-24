@@ -1,101 +1,112 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 :root {
-  --main-font: "Roboto", sans-serif;
-  --second-font: "Open Snas", sans-serif;
-  --spacing: 0.25rem;
-  --radius: 0.5rem;
-  --main-background-color: #121212;
-  --primary-font-color: #ffd731;
-  --second-font-color: #121212;
-  --second-background-color: #d8deda;
+    --main-font: "Roboto", sans-serif;
+    --second-font: "Open Snas", sans-serif;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --main-background-color: #121212;
+    --primary-font-color: #ffd731;
+    --second-font-color: #121212;
+    --second-background-color: #d8deda;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: var(--second-font);
-  background-color: var(--main-background-color);
-  color: var(--primary-font-color);
-  line-height: 1.5;
-  font-size: 0.875rem;
+    font-family: var(--second-font);
+    background-color: var(--main-background-color);
+    color: var(--primary-font-color);
+    line-height: 1.5;
+    font-size: 0.875rem;
 }
 
 header {
-  display: flex;
-  background-color: var(--second-background-color);
-  color: var(--second-font-color);
-  justify-content: space-between;
-  padding: 20px;
+    display: flex;
+    background-color: var(--second-background-color);
+    color: var(--second-font-color);
+    justify-content: space-between;
+    padding: 5px;
 }
 
 .logo {
-  width: 150px;
-  margin: 10px;
+    width: 150px;
+    margin: 10px;
 }
 
 .cabecera-menu {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
 }
 
 .cabecera-menu a {
-  margin: 0 30px;
-  text-decoration: none;
-  transition: 0.6s ease;
-  color: var(--second-font-color);
+    margin: 0 30px;
+    text-decoration: none;
+    transition: 0.6s ease;
+    color: var(--second-font-color);
 }
 
 .cabecera-menu a:hover {
-  background-color: var(--main-background-color);
-  border-radius: var(--radius);
-  color: #fff;
+    background-color: var(--main-background-color);
+    border-radius: 2px;
+    padding: 20px;
+    color: #fff;
 }
 
 /* Estilos para el formulario */
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    align-content: center;
+    font-family: var(--main-font);
+}
+
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: var(--second-background-color);
-  border-radius: var(--radius);
-  margin-top: 50px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--second-background-color);
+    border-radius: var(--radius);
+    margin-top: 50px;
 }
 
 form div {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 label {
-  font-size: 1.2rem;
-  color: var(--second-font-color);
+    font-size: 1.2rem;
+    color: var(--second-font-color);
 }
 
 input {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid var(--second-font-color);
-  border-radius: var(--radius);
-  margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--second-font-color);
+    border-radius: var(--radius);
+    margin-top: 5px;
 }
 
 button {
-  background-color: var(--primary-font-color);
-  color: var(--main-background-color);
-  padding: 10px 20px;
-  border: none;
-  border-radius: var(--radius);
-  font-size: 1rem;
-  cursor: pointer;
+    background-color: var(--primary-font-color);
+    color: var(--main-background-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: var(--second-font-color);
-  color: #fff;
+    background-color: var(--second-font-color);
+    color: #fff;
 }
